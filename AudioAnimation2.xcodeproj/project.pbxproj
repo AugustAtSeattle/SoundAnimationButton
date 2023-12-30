@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */; };
 		CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A72B3FBB04005242D9 /* AppDelegate.swift */; };
 		CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */; };
 		CC9191AC2B3FBB04005242D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191AB2B3FBB04005242D9 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformLiveCanvasWrapper.swift; sourceTree = "<group>"; };
 		CC9191A42B3FBB04005242D9 /* AudioAnimation2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioAnimation2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9191A72B3FBB04005242D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,11 +67,12 @@
 				CC9191A72B3FBB04005242D9 /* AppDelegate.swift */,
 				CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */,
 				CC9191AB2B3FBB04005242D9 /* ViewController.swift */,
+				CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */,
+				CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */,
 				CC9191AD2B3FBB04005242D9 /* Main.storyboard */,
 				CC9191B02B3FBB05005242D9 /* Assets.xcassets */,
 				CC9191B22B3FBB05005242D9 /* LaunchScreen.storyboard */,
 				CC9191B52B3FBB05005242D9 /* Info.plist */,
-				CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */,
 			);
 			path = AudioAnimation2;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9191AC2B3FBB04005242D9 /* ViewController.swift in Sources */,
+				CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */,
 				CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */,
 				CC9191BC2B3FBB37005242D9 /* AudioRecorder.swift in Sources */,
 				CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */,

@@ -4,15 +4,14 @@
 //
 //  Created by Sailor on 12/29/23.
 
-
 import AVFoundation
+import Combine
 
-class AudioRecorder {
-
+class AudioRecorder: ObservableObject {
     var audioEngine: AVAudioEngine?
     var audioFile: AVAudioFile?
     var isRecording = false
-    var samples: [Float] = []
+    @Published var samples: [Float] = []
 
     func setupRecorder() {
         audioEngine = AVAudioEngine()
@@ -31,16 +30,15 @@ class AudioRecorder {
     }
 
     func startRecording() {
-        print("start 1")
         guard let audioEngine = audioEngine, !isRecording, let audioFile = audioFile else { return }
         
         let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [weak self] (buffer, _) in
             do {
                 try audioFile.write(from: buffer)
-                self.extractSamples(from: buffer)
+                self?.extractSamples(from: buffer)
             } catch {
                 print("Error writing to audio file: \(error)")
             }
@@ -59,23 +57,33 @@ class AudioRecorder {
         audioEngine?.inputNode.removeTap(onBus: 0)
         isRecording = false
     }
-    
+
     private func extractSamples(from buffer: AVAudioPCMBuffer) {
         guard let floatChannelData = buffer.floatChannelData else { return }
 
         let channelCount = Int(buffer.format.channelCount)
         let length = Int(buffer.frameLength)
 
+        var maxSample: Float = 0.01 // To avoid division by zero
+        for channel in 0..<channelCount {
+            for sampleIndex in 0..<length {
+                maxSample = max(maxSample, abs(floatChannelData[channel][sampleIndex]))
+            }
+        }
+
         for channel in 0..<channelCount {
             for sampleIndex in 0..<length {
                 let rawSample = floatChannelData[channel][sampleIndex]
+                let normalizedSample = abs(rawSample) / maxSample
+                let invertedSample = 1.0 - normalizedSample
 
-                // Convert the raw sample to a decibel-like value
-                let linearSample = 1 - pow(10, rawSample / 20)
-
-                // Add the computed sample to the samples array
-                samples.append(linearSample)
-                
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.samples.append(invertedSample)
+                    if self.samples.count > 400 {
+                        self.samples.removeFirst()
+                    }
+                }
             }
         }
     }

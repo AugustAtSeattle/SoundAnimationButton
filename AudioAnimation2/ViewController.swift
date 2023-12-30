@@ -37,10 +37,11 @@ class ViewController: UIViewController {
     }
     
     func setupAnimationView() {
-        let canvas = WaveformLiveCanvas(
-            samples: audioRecorder.samples,
+
+        let canvas = WaveformLiveCanvasWrapper(
+            audioRecorder: audioRecorder,
             configuration: liveConfiguration,
-            renderer: CircularWaveformRenderer(kind: .ring(1)),
+            renderer: CircularWaveformRenderer(kind: .ring(0.8)),
             shouldDrawSilencePadding: true
         )
 
