@@ -28,10 +28,18 @@ class ViewController: UIViewController {
     
     // setup button function
     func setupButton() {
-        button.setTitle("Record", for: .normal)
-        button.sizeToFit()
-        button.center = view.center
         
+        button.setTitle("Record", for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        button.center = view.center
+        button.backgroundColor = .red
+        // set button round
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        // set button shadow
+//        button.layer.shadowColor = UIColor.black.cgColor
+//        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        button.layer.shadowRadius = 5
+//        button.layer.shadowOpacity = 1.0
         button.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
         view.addSubview(button)
     }
@@ -41,7 +49,7 @@ class ViewController: UIViewController {
         let canvas = WaveformLiveCanvasWrapper(
             audioRecorder: audioRecorder,
             configuration: liveConfiguration,
-            renderer: CircularWaveformRenderer(kind: .ring(0.8)),
+            renderer: CircularWaveformRenderer(kind: .ring(0.7)),
             shouldDrawSilencePadding: true
         )
 
@@ -53,7 +61,7 @@ class ViewController: UIViewController {
 
         // Set constraints for viewToAdd
         NSLayoutConstraint.activate([
-            viewToAdd.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            viewToAdd.centerYAnchor.constraint(equalTo: button.centerYAnchor),
             viewToAdd.centerXAnchor.constraint(equalTo: button.centerXAnchor),
             viewToAdd.widthAnchor.constraint(equalToConstant: 100),
             viewToAdd.heightAnchor.constraint(equalToConstant: 100)
@@ -62,6 +70,7 @@ class ViewController: UIViewController {
         // Set the canvas view to be round
         viewToAdd.layer.cornerRadius = 50 // Half of the width and height
         viewToAdd.clipsToBounds = true
+        view.bringSubviewToFront(button)
     }
 
 
