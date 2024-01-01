@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */; };
+		CC3B832A2B42744D007511F7 /* SCAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3B83292B42744D007511F7 /* SCAudioManager.m */; };
 		CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A72B3FBB04005242D9 /* AppDelegate.swift */; };
 		CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */; };
 		CC9191AC2B3FBB04005242D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191AB2B3FBB04005242D9 /* ViewController.swift */; };
@@ -21,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformLiveCanvasWrapper.swift; sourceTree = "<group>"; };
+		CC3B83272B42744C007511F7 /* AudioAnimation2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioAnimation2-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC3B83282B42744D007511F7 /* SCAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioManager.h; sourceTree = "<group>"; };
+		CC3B83292B42744D007511F7 /* SCAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioManager.m; sourceTree = "<group>"; };
 		CC9191A42B3FBB04005242D9 /* AudioAnimation2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioAnimation2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9191A72B3FBB04005242D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,11 +72,14 @@
 				CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */,
 				CC9191AB2B3FBB04005242D9 /* ViewController.swift */,
 				CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */,
+				CC3B83282B42744D007511F7 /* SCAudioManager.h */,
+				CC3B83292B42744D007511F7 /* SCAudioManager.m */,
 				CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */,
 				CC9191AD2B3FBB04005242D9 /* Main.storyboard */,
 				CC9191B02B3FBB05005242D9 /* Assets.xcassets */,
 				CC9191B22B3FBB05005242D9 /* LaunchScreen.storyboard */,
 				CC9191B52B3FBB05005242D9 /* Info.plist */,
+				CC3B83272B42744C007511F7 /* AudioAnimation2-Bridging-Header.h */,
 			);
 			path = AudioAnimation2;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				TargetAttributes = {
 					CC9191A32B3FBB04005242D9 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -159,6 +167,7 @@
 				CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */,
 				CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */,
 				CC9191BC2B3FBB37005242D9 /* AudioRecorder.swift in Sources */,
+				CC3B832A2B42744D007511F7 /* SCAudioManager.m in Sources */,
 				CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27AF2HSKK7;
@@ -322,6 +332,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AugustAtSeattle.AudioAnimation2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioAnimation2/AudioAnimation2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27AF2HSKK7;
@@ -350,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AugustAtSeattle.AudioAnimation2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioAnimation2/AudioAnimation2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

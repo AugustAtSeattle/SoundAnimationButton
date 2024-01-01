@@ -11,17 +11,15 @@ import DSWaveformImageViews
 import SwiftUI
 
 class ViewController: UIViewController {
-    let audioRecorder = AudioRecorder()
-    // move button init here
     let button = UIButton(type: .system)
+    var canvas : WaveformLiveCanvasWrapper?
     
     private var liveConfiguration: Waveform.Configuration = Waveform.Configuration(
-        style: .striped(.init(color: .green, width: 2, spacing: 1)))
+        style: .striped(.init(color: .green, width: 4, spacing: 1)))
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioRecorder.setupRecorder()
         setupButton()
         setupAnimationView()
     }
@@ -46,8 +44,7 @@ class ViewController: UIViewController {
     
     func setupAnimationView() {
 
-        let canvas = WaveformLiveCanvasWrapper(
-            audioRecorder: audioRecorder,
+        canvas = WaveformLiveCanvasWrapper(
             configuration: liveConfiguration,
             renderer: CircularWaveformRenderer(kind: .ring(0.7)),
             shouldDrawSilencePadding: true
@@ -76,7 +73,10 @@ class ViewController: UIViewController {
 
     
     @objc func recordTapped() {
-        audioRecorder.startRecording()
+        guard let canvas = canvas else {
+            return
+        }
+        canvas.recordTapped()
     }
     
 }
