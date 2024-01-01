@@ -43,7 +43,7 @@ class AudioRecorder: NSObject, ObservableObject, RecordingDelegate {
 
     func audioManager(_ manager: SCAudioManager!, didUpdateRecordProgress progress: CGFloat) {
 //        print(manager.lastAveragePower())
-        let linear = 1 - pow(10, manager.lastAveragePower() / 50)
+        let linear = 1 - pow(10, manager.lastAveragePower() / 60)
 
 //        recordingTime = audioManager.currentRecordingTime
         print("linear: \(linear)")
