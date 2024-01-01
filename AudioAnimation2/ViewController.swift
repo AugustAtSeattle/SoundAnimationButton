@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var canvas : WaveformLiveCanvasWrapper?
     
     private var liveConfiguration: Waveform.Configuration = Waveform.Configuration(
-        style: .striped(.init(color: .green, width: 4, spacing: 1)))
+        style: .striped(.init(color: .green, width: 2, spacing: 1)))
 
 
     override func viewDidLoad() {
