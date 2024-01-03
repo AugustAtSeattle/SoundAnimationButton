@@ -47,7 +47,7 @@ struct AudioAnimationView: View {
                      .resizable()
                      .aspectRatio(contentMode: .fit)
                      .foregroundColor(.white)
-                     .padding(2)
+                     .padding(1)
                      .background(Circle().fill(Color.red))
              }
              .frame(width: width * 0.6, height: height * 0.6)
