@@ -20,7 +20,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SoundAnimationButton",
-            dependencies: []),
+            dependencies: ["SCAudioManager"]),
+        .systemLibrary(
+            name: "SCAudioManager",
+            path: "Sources/SCAudioManager",
+            pkgConfig: "sc_audio_manager"
+        ),
         .testTarget(
             name: "SoundAnimationButtonTests",
             dependencies: ["SoundAnimationButton"]),

@@ -1,0 +1,5 @@
+module SCAudioManager {
+    header "SCAudioManager.h"
+    export *
+}
+
