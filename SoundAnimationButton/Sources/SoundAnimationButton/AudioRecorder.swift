@@ -7,7 +7,6 @@
 import SCAudioManager
 import SwiftUI
 
-@available(iOS 13.0, *)
 class AudioRecorder: NSObject, ObservableObject, RecordingDelegate {
     @Published var samples: [Float] = []
     @Published var recordingTime: TimeInterval = 0
