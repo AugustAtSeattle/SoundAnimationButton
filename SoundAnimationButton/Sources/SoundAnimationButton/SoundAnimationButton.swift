@@ -1,7 +1,7 @@
 import UIKit
 import SwiftUI
 import DSWaveformImage
-import DSWaveformImageViews
+//import DSWaveformImageViews
 
 public class SoundAnimationButton: UIView {
     // Configuration struct for customizing the button

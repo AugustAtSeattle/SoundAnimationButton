@@ -7,26 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */; };
-		CC3B832A2B42744D007511F7 /* SCAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3B83292B42744D007511F7 /* SCAudioManager.m */; };
-		CC3B832C2B431D7A007511F7 /* AudioAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B832B2B431D7A007511F7 /* AudioAnimationView.swift */; };
+		CC7DC3CA2B46311C009051AF /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC7DC3C92B46311C009051AF /* DSWaveformImage */; };
+		CC7DC3CC2B46311C009051AF /* DSWaveformImageViews in Frameworks */ = {isa = PBXBuildFile; productRef = CC7DC3CB2B46311C009051AF /* DSWaveformImageViews */; };
 		CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A72B3FBB04005242D9 /* AppDelegate.swift */; };
 		CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */; };
 		CC9191AC2B3FBB04005242D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191AB2B3FBB04005242D9 /* ViewController.swift */; };
 		CC9191AF2B3FBB04005242D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9191AD2B3FBB04005242D9 /* Main.storyboard */; };
 		CC9191B12B3FBB05005242D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9191B02B3FBB05005242D9 /* Assets.xcassets */; };
 		CC9191B42B3FBB05005242D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9191B22B3FBB05005242D9 /* LaunchScreen.storyboard */; };
-		CC9191BC2B3FBB37005242D9 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */; };
-		CC9191BF2B3FBBBF005242D9 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC9191BE2B3FBBBF005242D9 /* DSWaveformImage */; };
-		CC9191C12B3FBBBF005242D9 /* DSWaveformImageViews in Frameworks */ = {isa = PBXBuildFile; productRef = CC9191C02B3FBBBF005242D9 /* DSWaveformImageViews */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformLiveCanvasWrapper.swift; sourceTree = "<group>"; };
-		CC3B83272B42744C007511F7 /* AudioAnimation2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioAnimation2-Bridging-Header.h"; sourceTree = "<group>"; };
-		CC3B83282B42744D007511F7 /* SCAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioManager.h; sourceTree = "<group>"; };
-		CC3B83292B42744D007511F7 /* SCAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioManager.m; sourceTree = "<group>"; };
-		CC3B832B2B431D7A007511F7 /* AudioAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnimationView.swift; sourceTree = "<group>"; };
 		CC9191A42B3FBB04005242D9 /* AudioAnimation2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioAnimation2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9191A72B3FBB04005242D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +26,6 @@
 		CC9191B02B3FBB05005242D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9191B32B3FBB05005242D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9191B52B3FBB05005242D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9191BF2B3FBBBF005242D9 /* DSWaveformImage in Frameworks */,
-				CC9191C12B3FBBBF005242D9 /* DSWaveformImageViews in Frameworks */,
+				CC7DC3CA2B46311C009051AF /* DSWaveformImage in Frameworks */,
+				CC7DC3CC2B46311C009051AF /* DSWaveformImageViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +63,10 @@
 				CC9191A72B3FBB04005242D9 /* AppDelegate.swift */,
 				CC9191A92B3FBB04005242D9 /* SceneDelegate.swift */,
 				CC9191AB2B3FBB04005242D9 /* ViewController.swift */,
-				CC3B832B2B431D7A007511F7 /* AudioAnimationView.swift */,
-				CC9191BB2B3FBB37005242D9 /* AudioRecorder.swift */,
-				CC3B83282B42744D007511F7 /* SCAudioManager.h */,
-				CC3B83292B42744D007511F7 /* SCAudioManager.m */,
-				CC3B83252B40D076007511F7 /* WaveformLiveCanvasWrapper.swift */,
 				CC9191AD2B3FBB04005242D9 /* Main.storyboard */,
 				CC9191B02B3FBB05005242D9 /* Assets.xcassets */,
 				CC9191B22B3FBB05005242D9 /* LaunchScreen.storyboard */,
 				CC9191B52B3FBB05005242D9 /* Info.plist */,
-				CC3B83272B42744C007511F7 /* AudioAnimation2-Bridging-Header.h */,
 			);
 			path = AudioAnimation2;
 			sourceTree = "<group>";
@@ -104,8 +88,8 @@
 			);
 			name = AudioAnimation2;
 			packageProductDependencies = (
-				CC9191BE2B3FBBBF005242D9 /* DSWaveformImage */,
-				CC9191C02B3FBBBF005242D9 /* DSWaveformImageViews */,
+				CC7DC3C92B46311C009051AF /* DSWaveformImage */,
+				CC7DC3CB2B46311C009051AF /* DSWaveformImageViews */,
 			);
 			productName = AudioAnimation2;
 			productReference = CC9191A42B3FBB04005242D9 /* AudioAnimation2.app */;
@@ -137,7 +121,7 @@
 			);
 			mainGroup = CC91919B2B3FBB04005242D9;
 			packageReferences = (
-				CC9191BD2B3FBBBF005242D9 /* XCRemoteSwiftPackageReference "DSWaveformImage" */,
+				CC7DC3C82B46311C009051AF /* XCRemoteSwiftPackageReference "DSWaveformImage" */,
 			);
 			productRefGroup = CC9191A52B3FBB04005242D9 /* Products */;
 			projectDirPath = "";
@@ -167,11 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9191AC2B3FBB04005242D9 /* ViewController.swift in Sources */,
-				CC3B83262B40D076007511F7 /* WaveformLiveCanvasWrapper.swift in Sources */,
 				CC9191A82B3FBB04005242D9 /* AppDelegate.swift in Sources */,
-				CC9191BC2B3FBB37005242D9 /* AudioRecorder.swift in Sources */,
-				CC3B832C2B431D7A007511F7 /* AudioAnimationView.swift in Sources */,
-				CC3B832A2B42744D007511F7 /* SCAudioManager.m in Sources */,
 				CC9191AA2B3FBB04005242D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AugustAtSeattle.AudioAnimation2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioAnimation2/AudioAnimation2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AugustAtSeattle.AudioAnimation2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioAnimation2/AudioAnimation2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,7 +377,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CC9191BD2B3FBBBF005242D9 /* XCRemoteSwiftPackageReference "DSWaveformImage" */ = {
+		CC7DC3C82B46311C009051AF /* XCRemoteSwiftPackageReference "DSWaveformImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmrschmidt/DSWaveformImage.git";
 			requirement = {
@@ -408,14 +388,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CC9191BE2B3FBBBF005242D9 /* DSWaveformImage */ = {
+		CC7DC3C92B46311C009051AF /* DSWaveformImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CC9191BD2B3FBBBF005242D9 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			package = CC7DC3C82B46311C009051AF /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
 			productName = DSWaveformImage;
 		};
-		CC9191C02B3FBBBF005242D9 /* DSWaveformImageViews */ = {
+		CC7DC3CB2B46311C009051AF /* DSWaveformImageViews */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CC9191BD2B3FBBBF005242D9 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			package = CC7DC3C82B46311C009051AF /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
 			productName = DSWaveformImageViews;
 		};
 /* End XCSwiftPackageProductDependency section */
